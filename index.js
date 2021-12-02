@@ -1,5 +1,5 @@
 const arg = process.argv[2];
-const day = ('0' + arg || new Date().getDate()).slice(-2);
+const day = ('0' + (arg || new Date().getDate())).slice(-2);
 
 const { partOne, partTwo } = require(`./${day}`);
 

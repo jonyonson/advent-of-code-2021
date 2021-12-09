@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-function getInput(inputFile) {
+function getInput(inputFile, delimiter = '\n') {
   try {
-    return fs.readFileSync(inputFile, 'utf8').trimEnd().split('\n');
+    return fs.readFileSync(inputFile, 'utf8').trimEnd().split(delimiter);
   } catch (err) {
     console.error(err);
     process.exit(1);
